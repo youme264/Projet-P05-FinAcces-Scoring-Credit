@@ -6,7 +6,7 @@ Système automatisé de scoring de crédit déployé sur Amazon Web Services pou
 
 ---
 
-## Architecture AWS
+##  Architecture AWS
 
 ```
 Internet
@@ -92,8 +92,8 @@ curl -X POST http://<ALB-DNS>/score \
 
 | Score | Catégorie | Décision |
 |-------|-----------|---------|
-| 700 – 1000 |  FAIBLE RISQUE | Crédit approuvé |
-| 500 – 699 | RISQUE MOYEN | Approuvé avec garanties |
+| 700 – 1000 | FAIBLE RISQUE | Crédit approuvé |
+| 500 – 699 |  RISQUE MOYEN | Approuvé avec garanties |
 | 0 – 499 |  RISQUE ÉLEVÉ | Crédit refusé |
 
 ---
@@ -126,8 +126,8 @@ curl -X POST http://<ALB-DNS>/score \
 
 ### 1. Cloner le repo sur l'EC2
 ```bash
-git clone https://github.com/<votre-repo>/finacces-sahel.git
-cd finacces-sahel
+git clone https://github.com/youme264/Projet-P05-FinAcces-Scoring-Credit.git
+cd Projet-P05-FinAcces-Scoring-Credit
 ```
 
 ### 2. Installer les dépendances
@@ -158,7 +158,7 @@ curl http://localhost:5000/health
 
 ---
 
-##  Sécurité
+## Sécurité
 
 - **IAM Role EC2** : `s3:GetObject` uniquement sur le bucket `finacces-sahel-models` — aucune clé AWS dans le code
 - **RDS dans sous-réseau privé** : inaccessible depuis Internet
@@ -168,7 +168,7 @@ curl http://localhost:5000/health
 
 ---
 
-## Monitoring CloudWatch
+##  Monitoring CloudWatch
 
 | Alarme | Métrique | Seuil |
 |--------|---------|-------|
@@ -178,7 +178,7 @@ curl http://localhost:5000/health
 
 ---
 
-##  ROI
+## ROI
 
 | Indicateur | Valeur |
 |-----------|--------|
